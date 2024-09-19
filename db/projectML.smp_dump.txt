@@ -1,0 +1,12 @@
+
+State Machine - |ff_network|manager:manager_inst|state
+Name state.Work_St state.Load_St state.Read_W_St state.Read_O_St state.Write_I_St state.Write_W_St state.Wait_St state.Reset_St state.Cmplt_St 
+state.Reset_St 0 0 0 0 0 0 0 0 0 
+state.Wait_St 0 0 0 0 0 0 1 1 0 
+state.Write_W_St 0 0 0 0 0 1 0 1 0 
+state.Write_I_St 0 0 0 0 1 0 0 1 0 
+state.Read_O_St 0 0 0 1 0 0 0 1 0 
+state.Read_W_St 0 0 1 0 0 0 0 1 0 
+state.Load_St 0 1 0 0 0 0 0 1 0 
+state.Work_St 1 0 0 0 0 0 0 1 0 
+state.Cmplt_St 0 0 0 0 0 0 0 1 1 

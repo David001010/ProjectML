@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at manager.sv(172): always construct contains both blocking and non-blocking assignments File: D:/verilogProject/projectML/projectML/manager.sv Line: 172

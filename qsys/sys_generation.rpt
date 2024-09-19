@@ -1,0 +1,166 @@
+Info: Starting: Create simulation model
+Info: qsys-generate "D:\verilog project\projectML\sys.qsys" --simulation=VERILOG --allow-mixed-language-simulation --output-directory="D:\verilog project\projectML\qsys\simulation" --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading projectML/sys.qsys
+Progress: Reading input file
+Progress: Adding CPU [altera_nios2_gen2 22.1]
+Progress: Parameterizing module CPU
+Progress: Adding RAM [altera_avalon_onchip_memory2 22.1]
+Progress: Parameterizing module RAM
+Progress: Adding UART [altera_avalon_uart 22.1]
+Progress: Parameterizing module UART
+Progress: Adding clk_0 [clock_source 22.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: sys: Generating sys "sys" for SIM_VERILOG
+Info: CPU: "sys" instantiated altera_nios2_gen2 "CPU"
+Info: RAM: Starting RTL generation for module 'sys_RAM'
+Info: RAM:   Generation command is [exec C:/users/user/desktop/quartus/bin64/perl/bin/perl.exe -I C:/users/user/desktop/quartus/bin64/perl/lib -I C:/users/user/desktop/quartus/sopc_builder/bin/europa -I C:/users/user/desktop/quartus/sopc_builder/bin -I C:/users/user/desktop/quartus/../ip/altera/sopc_builder_ip/common -I C:/users/user/desktop/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/users/user/desktop/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=sys_RAM --dir=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0002_RAM_gen/ --quartus_dir=C:/users/user/desktop/quartus --verilog --config=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0002_RAM_gen//sys_RAM_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0002_RAM_gen/  ]
+Info: RAM: Done RTL generation for module 'sys_RAM'
+Info: RAM: "sys" instantiated altera_avalon_onchip_memory2 "RAM"
+Info: UART: Starting RTL generation for module 'sys_UART'
+Info: UART:   Generation command is [exec C:/users/user/desktop/quartus/bin64/perl/bin/perl.exe -I C:/users/user/desktop/quartus/bin64/perl/lib -I C:/users/user/desktop/quartus/sopc_builder/bin/europa -I C:/users/user/desktop/quartus/sopc_builder/bin -I C:/users/user/desktop/quartus/../ip/altera/sopc_builder_ip/common -I C:/users/user/desktop/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart -- C:/users/user/desktop/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart/generate_rtl.pl --name=sys_UART --dir=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0003_UART_gen/ --quartus_dir=C:/users/user/desktop/quartus --verilog --config=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0003_UART_gen//sys_UART_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0003_UART_gen/  ]
+Info: UART: Done RTL generation for module 'sys_UART'
+Info: UART: "sys" instantiated altera_avalon_uart "UART"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "sys" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "sys" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "sys" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'sys_CPU_cpu'
+Info: cpu:   Generation command is [exec C:/Users/user/Desktop/quartus/bin64//perl/bin/perl.exe -I C:/Users/user/Desktop/quartus/bin64//perl/lib -I C:/users/user/desktop/quartus/sopc_builder/bin/europa -I C:/users/user/desktop/quartus/sopc_builder/bin -I C:/users/user/desktop/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/users/user/desktop/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/users/user/desktop/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/users/user/desktop/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/users/user/desktop/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=sys_CPU_cpu --dir=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0006_cpu_gen/ --quartus_bindir=C:/Users/user/Desktop/quartus/bin64/ --verilog --config=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0006_cpu_gen//sys_CPU_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0006_cpu_gen/  ]
+Info: cpu: # 2023.09.23 19:05:58 (*) Starting Nios II generation
+Info: cpu: # 2023.09.23 19:05:58 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.09.23 19:05:58 (*)   Creating all objects for CPU
+Info: cpu: # 2023.09.23 19:05:59 (*)   Creating 'C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0006_cpu_gen//sys_CPU_cpu_nios2_waves.do'
+Info: cpu: # 2023.09.23 19:05:59 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.09.23 19:05:59 (*)   Creating plain-text RTL
+Info: cpu: # 2023.09.23 19:06:00 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'sys_CPU_cpu'
+Info: cpu: "CPU" instantiated altera_nios2_gen2_unit "cpu"
+Info: CPU_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "CPU_data_master_translator"
+Info: CPU_debug_mem_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "CPU_debug_mem_slave_translator"
+Info: CPU_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "CPU_data_master_agent"
+Info: CPU_debug_mem_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "CPU_debug_mem_slave_agent"
+Info: CPU_debug_mem_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "CPU_debug_mem_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file D:/verilog project/projectML/qsys/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/verilog project/projectML/qsys/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file D:/verilog project/projectML/qsys/simulation/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: sys: Done "sys" with 27 modules, 47 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd="D:\verilog project\projectML\qsys\sys.spd" --output-directory="D:/verilog project/projectML/qsys/simulation/" --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=D:\verilog project\projectML\qsys\sys.spd --output-directory=D:/verilog project/projectML/qsys/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in D:/verilog project/projectML/qsys/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for RIVIERA simulator in D:/verilog project/projectML/qsys/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/verilog project/projectML/qsys/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "D:\verilog project\projectML\sys.qsys" --block-symbol-file --output-directory="D:\verilog project\projectML\qsys" --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading projectML/sys.qsys
+Progress: Reading input file
+Progress: Adding CPU [altera_nios2_gen2 22.1]
+Progress: Parameterizing module CPU
+Progress: Adding RAM [altera_avalon_onchip_memory2 22.1]
+Progress: Parameterizing module RAM
+Progress: Adding UART [altera_avalon_uart 22.1]
+Progress: Parameterizing module UART
+Progress: Adding clk_0 [clock_source 22.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "D:\verilog project\projectML\sys.qsys" --synthesis=VERILOG --output-directory="D:\verilog project\projectML\qsys\synthesis" --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading projectML/sys.qsys
+Progress: Reading input file
+Progress: Adding CPU [altera_nios2_gen2 22.1]
+Progress: Parameterizing module CPU
+Progress: Adding RAM [altera_avalon_onchip_memory2 22.1]
+Progress: Parameterizing module RAM
+Progress: Adding UART [altera_avalon_uart 22.1]
+Progress: Parameterizing module UART
+Progress: Adding clk_0 [clock_source 22.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: sys: Generating sys "sys" for QUARTUS_SYNTH
+Info: CPU: "sys" instantiated altera_nios2_gen2 "CPU"
+Info: RAM: Starting RTL generation for module 'sys_RAM'
+Info: RAM:   Generation command is [exec C:/users/user/desktop/quartus/bin64/perl/bin/perl.exe -I C:/users/user/desktop/quartus/bin64/perl/lib -I C:/users/user/desktop/quartus/sopc_builder/bin/europa -I C:/users/user/desktop/quartus/sopc_builder/bin -I C:/users/user/desktop/quartus/../ip/altera/sopc_builder_ip/common -I C:/users/user/desktop/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/users/user/desktop/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=sys_RAM --dir=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0026_RAM_gen/ --quartus_dir=C:/users/user/desktop/quartus --verilog --config=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0026_RAM_gen//sys_RAM_component_configuration.pl  --do_build_sim=0  ]
+Info: RAM: Done RTL generation for module 'sys_RAM'
+Info: RAM: "sys" instantiated altera_avalon_onchip_memory2 "RAM"
+Info: UART: Starting RTL generation for module 'sys_UART'
+Info: UART:   Generation command is [exec C:/users/user/desktop/quartus/bin64/perl/bin/perl.exe -I C:/users/user/desktop/quartus/bin64/perl/lib -I C:/users/user/desktop/quartus/sopc_builder/bin/europa -I C:/users/user/desktop/quartus/sopc_builder/bin -I C:/users/user/desktop/quartus/../ip/altera/sopc_builder_ip/common -I C:/users/user/desktop/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart -- C:/users/user/desktop/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart/generate_rtl.pl --name=sys_UART --dir=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0027_UART_gen/ --quartus_dir=C:/users/user/desktop/quartus --verilog --config=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0027_UART_gen//sys_UART_component_configuration.pl  --do_build_sim=0  ]
+Info: UART: Done RTL generation for module 'sys_UART'
+Info: UART: "sys" instantiated altera_avalon_uart "UART"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "sys" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "sys" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "sys" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'sys_CPU_cpu'
+Info: cpu:   Generation command is [exec C:/Users/user/Desktop/quartus/bin64//perl/bin/perl.exe -I C:/Users/user/Desktop/quartus/bin64//perl/lib -I C:/users/user/desktop/quartus/sopc_builder/bin/europa -I C:/users/user/desktop/quartus/sopc_builder/bin -I C:/users/user/desktop/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/users/user/desktop/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/users/user/desktop/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/users/user/desktop/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/users/user/desktop/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=sys_CPU_cpu --dir=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0030_cpu_gen/ --quartus_bindir=C:/Users/user/Desktop/quartus/bin64/ --verilog --config=C:/Users/user/AppData/Local/Temp/alt9623_3527629483737125286.dir/0030_cpu_gen//sys_CPU_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.09.23 19:06:34 (*) Starting Nios II generation
+Info: cpu: # 2023.09.23 19:06:34 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.09.23 19:06:34 (*)   Creating all objects for CPU
+Info: cpu: # 2023.09.23 19:06:36 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.09.23 19:06:36 (*)   Creating plain-text RTL
+Info: cpu: # 2023.09.23 19:06:36 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'sys_CPU_cpu'
+Info: cpu: "CPU" instantiated altera_nios2_gen2_unit "cpu"
+Info: CPU_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "CPU_data_master_translator"
+Info: CPU_debug_mem_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "CPU_debug_mem_slave_translator"
+Info: CPU_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "CPU_data_master_agent"
+Info: CPU_debug_mem_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "CPU_debug_mem_slave_agent"
+Info: CPU_debug_mem_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "CPU_debug_mem_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file D:/verilog project/projectML/qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/verilog project/projectML/qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file D:/verilog project/projectML/qsys/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: sys: Done "sys" with 27 modules, 40 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

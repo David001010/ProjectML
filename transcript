@@ -1,0 +1,109 @@
+# Reading D:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+do sim.do
+# layer_tb
+# projectML
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:12:51 on Apr 23,2024
+# vlog -reportprogress 300 ../projectML/sigmoid.sv 
+# -- Compiling module sigmoid
+# 
+# Top level modules:
+# 	sigmoid
+# End time: 18:12:51 on Apr 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:12:51 on Apr 23,2024
+# vlog -reportprogress 300 ../projectML/layer.sv 
+# -- Compiling module layer
+# 
+# Top level modules:
+# 	layer
+# End time: 18:12:51 on Apr 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:12:51 on Apr 23,2024
+# vlog -reportprogress 300 ../projectML/layer_tb.sv 
+# -- Compiling module layer_tb
+# 
+# Top level modules:
+# 	layer_tb
+# End time: 18:12:51 on Apr 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.layer_tb 
+# Start time: 18:12:51 on Apr 23,2024
+# Loading sv_std.std
+# Loading work.layer_tb
+# Loading work.layer
+# Loading work.sigmoid
+# ** Warning: (vsim-3015) ../projectML/layer.sv(62): [PCDPC] - Port size (10) does not match connection size (11) for port 'x'. The port definition is at: ../projectML/sigmoid.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /layer_tb/dut/loop_l[0]/sigm_inst_o File: ../projectML/sigmoid.sv
+# ** Warning: (vsim-3015) ../projectML/layer.sv(62): [PCDPC] - Port size (10) does not match connection size (11) for port 'x'. The port definition is at: ../projectML/sigmoid.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /layer_tb/dut/loop_l[1]/sigm_inst_o File: ../projectML/sigmoid.sv
+# Invalid window pattern: do
+# .main_pane.wave.interior.cs.body.pw.wf .main_pane.source.interior.cs.body.srcobj .main_pane.stackview.interior.cs.body.tb .main_pane.structural.interior.cs.body.structural .main_pane.structure.interior.cs.body.struct
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 1001 of file "snum.txt". (Current address [1000], address range [0:999])    : ../projectML/sigmoid.sv(15)
+#    Time: 0 ps  Iteration: 0  Instance: /layer_tb/dut/loop_l[0]/sigm_inst_o
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 1001 of file "snum.txt". (Current address [1000], address range [0:999])    : ../projectML/sigmoid.sv(15)
+#    Time: 0 ps  Iteration: 0  Instance: /layer_tb/dut/loop_l[1]/sigm_inst_o
+# ** Note: $stop    : ../projectML/layer_tb.sv(118)
+#    Time: 310 ns  Iteration: 0  Instance: /layer_tb
+# Break in Module layer_tb at ../projectML/layer_tb.sv line 118
+do sim.do
+# layer_tb
+# projectML
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:33:10 on Apr 23,2024
+# vlog -reportprogress 300 ../projectML/sigmoid.sv 
+# -- Compiling module sigmoid
+# 
+# Top level modules:
+# 	sigmoid
+# End time: 18:33:10 on Apr 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:33:10 on Apr 23,2024
+# vlog -reportprogress 300 ../projectML/layer.sv 
+# -- Compiling module layer
+# 
+# Top level modules:
+# 	layer
+# End time: 18:33:10 on Apr 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:33:10 on Apr 23,2024
+# vlog -reportprogress 300 ../projectML/layer_tb.sv 
+# -- Compiling module layer_tb
+# 
+# Top level modules:
+# 	layer_tb
+# End time: 18:33:10 on Apr 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:33:19 on Apr 23,2024, Elapsed time: 0:20:28
+# Errors: 1, Warnings: 4
+# vsim -voptargs="+acc" work.layer_tb 
+# Start time: 18:33:19 on Apr 23,2024
+# Loading sv_std.std
+# Loading work.layer_tb
+# Loading work.layer
+# Loading work.sigmoid
+# ** Warning: (vsim-3015) ../projectML/layer.sv(62): [PCDPC] - Port size (10) does not match connection size (11) for port 'x'. The port definition is at: ../projectML/sigmoid.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /layer_tb/dut/loop_l[0]/sigm_inst_o File: ../projectML/sigmoid.sv
+# ** Warning: (vsim-3015) ../projectML/layer.sv(62): [PCDPC] - Port size (10) does not match connection size (11) for port 'x'. The port definition is at: ../projectML/sigmoid.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /layer_tb/dut/loop_l[1]/sigm_inst_o File: ../projectML/sigmoid.sv
+# Invalid window pattern: do
+# .main_pane.wave.interior.cs.body.pw.wf .main_pane.source.interior.cs.body.srcobj .main_pane.stackview.interior.cs.body.tb .main_pane.structural.interior.cs.body.structural .main_pane.structure.interior.cs.body.struct
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 1001 of file "snum.txt". (Current address [1000], address range [0:999])    : ../projectML/sigmoid.sv(15)
+#    Time: 0 ps  Iteration: 0  Instance: /layer_tb/dut/loop_l[0]/sigm_inst_o
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 1001 of file "snum.txt". (Current address [1000], address range [0:999])    : ../projectML/sigmoid.sv(15)
+#    Time: 0 ps  Iteration: 0  Instance: /layer_tb/dut/loop_l[1]/sigm_inst_o
+# ** Note: $stop    : ../projectML/layer_tb.sv(118)
+#    Time: 310 ns  Iteration: 0  Instance: /layer_tb
+# Break in Module layer_tb at ../projectML/layer_tb.sv line 118
+# End time: 18:43:29 on Apr 23,2024, Elapsed time: 0:10:10
+# Errors: 1, Warnings: 4
