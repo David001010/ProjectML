@@ -51,7 +51,9 @@ module ff_network #(parameter
            .WIDTH_W(WIDTH_W), 
 	        .LENGHT_I(LENGHT_I),
 	        .LENGHT_MID(LENGHT_MID),
-	        .LENGHT_O(LENGHT_O)
+	        .LENGHT_O(LENGHT_O),
+			  .WIDTH_I(WIDTH_I),
+			  .WIDTH_O(WIDTH_O)
            )
 			  manager_inst(
 			  .clk(clk),
@@ -64,7 +66,9 @@ module ff_network #(parameter
 	        .ready(ready),
 			  .down(down),
 			  .wr(wr),
-	        .w_o(reg_w)
+	        .w_o(reg_w),
+			  .i_in(reg_o),
+			  .i_o(reg_i)
 			  
 			   );
   

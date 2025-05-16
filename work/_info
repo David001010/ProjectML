@@ -8,40 +8,63 @@ z2
 !i10f 100
 cModel Technology
 dD:/verilogProject/projectML
-vlayer
+vff_network
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1713882790
+Z1 !s110 1747408115
 !i10b 1
-!s100 X8m`H7ZXKJb6IU8hQ5BDf1
-I5=Jz:n]3ih1=aS;0nI<_b3
+!s100 X[IoC1R:I:KMYz^k6CBNl0
+I?FNk1PjLWfL[V3W<RJ@mZ0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
-!s105 layer_sv_unit
+!s105 ff_network_sv_unit
 S1
 Z3 dD:/verilogProject/projectML/projectML
-w1713882663
-8../projectML/layer.sv
-F../projectML/layer.sv
+w1744454146
+8../projectML/ff_network.sv
+F../projectML/ff_network.sv
 L0 1
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1713882790.000000
-!s107 ../projectML/layer.sv|
-!s90 -reportprogress|300|../projectML/layer.sv|
+Z5 !s108 1747408115.000000
+!s107 ../projectML/ff_network.sv|
+!s90 -reportprogress|300|../projectML/ff_network.sv|
 !i113 1
 Z6 tCvgOpt 0
-vlayer_tb
+vlayer
 R0
 R1
 !i10b 1
-!s100 ZI3E?AJkI28h6Ve_bWdlf1
-ILUjZ_iV;3zUB?R4zBkQ>l2
+!s100 lH46K^4ndF4DgRVdL`0bz1
+I`kaefQofj0nel[00[g6`42
+R2
+!s105 layer_sv_unit
+S1
+R3
+w1747408073
+8../projectML/layer.sv
+F../projectML/layer.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../projectML/layer.sv|
+!s90 -reportprogress|300|../projectML/layer.sv|
+!i113 1
+R6
+vlayer_tb
+R0
+!s110 1737386437
+!i10b 1
+!s100 hcckN=UUQAIFcSifUOZCi3
+IW_Fb2BK_gSYfg9COER`Lb3
 R2
 !s105 layer_tb_sv_unit
 S1
 R3
-w1713880363
+w1737187544
 8../projectML/layer_tb.sv
 F../projectML/layer_tb.sv
 L0 3
@@ -49,14 +72,60 @@ R4
 r1
 !s85 0
 31
-R5
+!s108 1737386437.000000
 !s107 ../projectML/layer_tb.sv|
 !s90 -reportprogress|300|../projectML/layer_tb.sv|
 !i113 1
 R6
-vsigmoid
+vmanager
 R0
 R1
+!i10b 1
+!s100 <<;GRiTR;5^;Dj;T_5fW42
+I^J1Z5Um0jc838ioD77Vj30
+R2
+!s105 manager_sv_unit
+S1
+R3
+w1744293712
+8../projectML/manager.sv
+F../projectML/manager.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../projectML/manager.sv|
+!s90 -reportprogress|300|../projectML/manager.sv|
+!i113 1
+R6
+vnetwork_tb
+R0
+R1
+!i10b 1
+!s100 9PeMmo4f8M9<ZCoQH`?m^1
+I_@49759=Ra0ZnG2f9J]HX0
+R2
+!s105 network_tb_sv_unit
+S1
+R3
+w1744452804
+8../projectML/network_tb.sv
+F../projectML/network_tb.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 ../projectML/network_tb.sv|
+!s90 -reportprogress|300|../projectML/network_tb.sv|
+!i113 1
+R6
+vsigmoid
+R0
+!s110 1713882790
 !i10b 1
 !s100 UAFNO__FFO7[MVh18;J1P0
 I0cFS<A=OJ0SM2[N<G3faI1
@@ -72,8 +141,54 @@ R4
 r1
 !s85 0
 31
-R5
+!s108 1713882790.000000
 !s107 ../projectML/sigmoid.sv|
 !s90 -reportprogress|300|../projectML/sigmoid.sv|
+!i113 1
+R6
+vtwos_compleme
+R0
+Z7 !s110 1746975548
+!i10b 1
+!s100 1FCJFVkC_nOgKPDYFL2Pe0
+I@4R?@lkTUIU9gf7E3d3]Z2
+R2
+!s105 twos_compleme_sv_unit
+S1
+R3
+w1745995595
+8../projectML/twos_compleme.sv
+F../projectML/twos_compleme.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z8 !s108 1746975548.000000
+!s107 ../projectML/twos_compleme.sv|
+!s90 -reportprogress|300|../projectML/twos_compleme.sv|
+!i113 1
+R6
+vtwos_compleme_tb
+R0
+R7
+!i10b 1
+!s100 ]FH4bQG@57a@;0KVTWEGf0
+IkHCLzo1G?l=^Pn_`ajST>3
+R2
+!s105 twos_compleme_tb_sv_unit
+S1
+R3
+w1746165782
+8../projectML/twos_compleme_tb.sv
+F../projectML/twos_compleme_tb.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R8
+!s107 ../projectML/twos_compleme_tb.sv|
+!s90 -reportprogress|300|../projectML/twos_compleme_tb.sv|
 !i113 1
 R6

@@ -1,4 +1,4 @@
-module sigmoid #(parameter
+	module sigmoid #(parameter
   //WIDTH = 32,
   RANGE = 1000,
   WIDTH_I = $clog2(RANGE),
@@ -11,7 +11,7 @@ module sigmoid #(parameter
   reg [WIDTH_O-1:0]sigm[0:RANGE-1];
   
   initial 
-    begin
+    begin	
 	   $readmemh("snum.txt",sigm);
     end
 	

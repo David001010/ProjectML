@@ -1,0 +1,43 @@
+module twos_compleme(
+ WIDTH_I = 1,//1
+ WIDTH_W = 9,//9
+
+
+
+);
+( 
+ input clk,
+ input [WIDTH_W + WIDTH_I+1-1:0]in,
+ 
+ output [WIDTH_W + WIDTH_I+1-1:0]out
+
+
+
+)
+
+ logic [WIDTH_W + WIDTH_I+1-1:0]in_reg;
+ 
+ 
+ always @(posedge clk)
+  begin 
+   in_reg <= in;
+  end
+  
+ assign out = in_reg[WIDTH_W + WIDTH_I + 1 - 1] ? (~in_reg[WIDTH_W + WIDTH_I + 1 - 2:0] + 1'b1) : in_reg;
+
+endmodule
+   
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+endmodule

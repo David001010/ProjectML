@@ -3,35 +3,59 @@
 module layer_tb
   
   #(parameter
-  LENGHT_I = 4,//32
-  LENGHT_O = 2,//8
-  WIDTH_W = 9,//9
-  WIDTH_S = 10,//10
-  WIDTH_O = $clog2(RANGE_SIGM), //7
-  WIDTH_I = 1,//1
-  WIDTH_SM =WIDTH_I+WIDTH_W+$clog2(LENGHT_I),//8
-  RANGE_SIGM = 1000,
-  ZERO_NUM = $clog2(RANGE_SIGM)-WIDTH_SM,
-  WIDTH_SIGM = $clog2(RANGE_SIGM) 
+   N_LAYER_W =1,
+	WIDTH= 4,
+  RANGE_SIGM = 16,
+  //neiron in 
+  LENGHT_I = 2,
+  WIDTH_I = 1,
+  //neiron mid 
+  LENGHT_MID = 2,
+  WIDTH_MID = $clog2(RANGE_SIGM),
+  //neiron out
+  LENGHT_O = 2,
+  WIDTH_O = $clog2(RANGE_SIGM),
+  //weight in 
+//  WIDTH_W_I = 9,
+//  //weight out
+//  WIDTH_W_O = 9 ,
+  WIDTH_W = 4,
+	WIDTH_ADDR = $clog2(LENGHT_I*LENGHT_MID+LENGHT_MID*LENGHT_O+LENGHT_I+LENGHT_O+3),
+	MAX_REG_W = LENGHT_I*LENGHT_MID+LENGHT_MID*LENGHT_O+1,
+	MAX_REG_I = MAX_REG_W + LENGHT_I+1,
+	MAX_REG_O = MAX_REG_I + LENGHT_O+1 //309
 )
   (
   
   );
   
-  
-   logic 													clk;
-  	logic [LENGHT_I*LENGHT_O-1:0] [WIDTH_W-1:0]  w_i;
-	logic [LENGHT_I-1:0] [WIDTH_I-1:0] 				in;
+  //in 
+    logic 										 clk;
+	logic                                      reset;
+  	logic [WIDTH-1:0]                           in_d, u;
+	logic [WIDTH_ADDR-1:0]                   address;
+	logic                                       read;
+    logic                                      write;
+	logic [LENGHT_O-1:0] [WIDTH_O-1:0]          i_in, d ;
+	logic [LENGHT_I-1:0] [WIDTH_I-1:0]           i_o;
 	
 	
-	logic [LENGHT_O-1:0] [WIDTH_O-1:0] out ;
+	//out 
+	logic                [WIDTH-1:0]    out_d ;
+	logic  										ready;
+	logic   										down;
+	logic                               wr;
+	logic [MAX_REG_W-2:0] [WIDTH_W-1:0] w_o;
 	
-  layer #(.LENGHT_I(LENGHT_I),
+  manager #(.LENGHT_I(LENGHT_I),
           .LENGHT_O(LENGHT_O),
+			 .LENGHT_MID(LENGHT_MID),
 			 .WIDTH_W(WIDTH_W),
-			 .WIDTH_S(WIDTH_S),
+			 .WIDTH(WIDTH),
+			 .WIDTH_ADDR(WIDTH_ADDR),
 			 .WIDTH_I(WIDTH_I),
-			 .RANGE_SIGM(RANGE_SIGM)
+			 .WIDTH_O(WIDTH_O)
+			 
 			 
 			 
 			 
@@ -41,82 +65,120 @@ module layer_tb
   
   initial
     begin
-	  
-		clk = 1'b0;
-		w_i[0]= 0;
-		w_i[1]= 0;
-		w_i[2]= 0;
-		w_i[3]= 0;	
-		w_i[4]= 0;
-		w_i[5]= 0;
-		w_i[6]= 0;
-		w_i[7]= 0;
-		in[0] = 0;
-		in[1] = 0;
-		in[2] = 0;
-		in[3] = 0;
-		
-		
-		# 50;
-///////////////////// ///////////////////////////////		
-		w_i[0]= 1;
-		w_i[1]= 2;
-		w_i[2]= 3;
-		w_i[3]= 4;	
-		w_i[4]= 5;
-		w_i[5]= 1;
-		w_i[6]= 2;
-		w_i[7]= 3;	
-		in[0] = 0;
-		in[1] = 1;
-		in[2] = 1;
-		in[3] = 1;
-		
-		 
-		#20;
-		w_i[0]= 0;
-		w_i[1]= 0;
-		w_i[2]= 0;
-		w_i[3]= 0;	
-		w_i[4]= 0;
-		w_i[5]= 0;
-		w_i[6]= 0;
-		w_i[7]= 0;	
-		in[0] = 0;
-		in[1] = 0;
-		in[2] = 0;
-		in[3] = 0;
-		
-//		#50;
-//		w_i[0]= -2;
-//		w_i[1]= 4;
-//		in[0] = 1;
-//		in[1] = 1;
-                #35;
-		
-		          
-//////////////////////////////////////////////////////
-		#50;
-		
-		
-		 
-		#20;
-//		
-//		w_i[0]= -2;
-//		w_i[1]= -4;
-//		in[0] = 1;
-//		in[1] = 1;
-		
-		
-		#50;
-		
-                #35;
-		
-//////////////////////////////////////////////////////
-               
-                #50;
+	 clk = 0;
+    reset = 1;
+    read = 0;
+    write = 0;
+    in_d = 0;
+    address = 9'd0;
+	i_in = 0;
+	 
+	 # 50;
+	 reset = 0;
+    
+/// write state 
+//	 # 50;
+//	 read = 0;
+//    write = 1;
+//    in_d = 9'd1;
+//    address = 9'd0;
+//	 
+//	 # 50;
+//	 read = 0;
+//    write = 1;
+//    in_d = 9'd3;
+//    address = 9'd1;
+//	 
+//	 # 50; 
+//	 read = 0;
+//    write = 1;
+//    in_d = 9'd5;
+//    address = 9'd2;
+//	 
+//	 # 50;
+//	 read = 0;
+//    write = 1;
+//    in_d = 9'd1;
+//    address = 9'd3;
+//	 
+//	 # 50;
+//	 read = 0;
+//    write = 1;
+//    in_d = 9'b1111;
+//    address = 9'd4;          
+      #50;
+		gen_write_w(8,clk);
+		@(posedge clk);
+	   in_d = 9'b1111;
+      address = 9'd8;
+		@(posedge clk);
+	   wait_task(4,clk);	
+		gen_write_i(2,clk);
+		@(posedge clk);
+		in_d = 9'b1111;
+		address = 9'd11;
+		@(posedge  clk);
+		network_out(7,clk);
+		#250;
 		  $stop;
+  
 		  
 	 end 
 	 
+
+task automatic gen_write_w(int rpt, ref logic clk);
+	begin
+	   read = 0;
+		write = 1;
+		repeat(rpt-1) 
+		  begin 
+		    @(posedge clk);
+			 in_d = in_d + 1;
+			 address = address + 1;
+		  end
+		
+	end
+endtask
+task automatic wait_task(int rpt, ref logic clk);
+	begin
+	   read = 0;
+		write = 0;
+		address++;	
+		in_d = 9'b0000;
+		
+		repeat(rpt-1) 
+		  begin 
+		    @(posedge clk);
+			 
+		  end
+		
+	end
+endtask 
+
+task automatic gen_write_i(int rpt, ref logic clk);
+	begin
+	   read = 0;
+		write = 1;
+		repeat(rpt-1) 
+		  begin 
+		    @(posedge clk);
+			 in_d = in_d + 1;
+			 address = address + 1;
+			 
+		  end
+		
+	end
+endtask
+task automatic network_out(int rpt, ref logic clk);
+	begin
+	   i_in=0;
+	   
+		repeat(rpt-1) 
+		  begin 
+		    @(posedge clk);
+			i_in = 0;
+		  end
+		i_in = 1;
+	end
+endtask
 endmodule

@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE10F17C8
-set_global_assignment -name TOP_LEVEL_ENTITY ff_network
+set_global_assignment -name TOP_LEVEL_ENTITY layer
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.2
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:14:31  SEPTEMBER 23, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -66,6 +66,7 @@ set_global_assignment -name SYSTEMVERILOG_FILE layer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE sigmoid.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ff_network.sv
 set_global_assignment -name SYSTEMVERILOG_FILE manager.sv
+set_global_assignment -name SYSTEMVERILOG_FILE twos_compleme.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
